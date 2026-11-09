@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 min-w-80 bg-[#0b1020] font-sans text-slate-100 antialiased;
+    background-image: radial-gradient(circle at 85% 0%, rgba(91, 140, 255, .13), transparent 30rem);
+  }
+}
+
+@layer components {
+  .brand-mark { @apply flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#5b8cff] to-[#8b5cf6] font-bold text-white shadow-lg shadow-blue-900/30; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[.2em] text-[#16c7b7]; }
+  .text-gradient { @apply bg-gradient-to-r from-[#5b8cff] via-[#8b5cf6] to-[#16c7b7] bg-clip-text text-transparent; }
+  .pill { @apply inline-flex items-center rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1.5; }
+  .button-primary { @apply rounded-lg bg-[#5b8cff] px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-400; }
+  .button-secondary { @apply rounded-lg border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:border-[#5b8cff] hover:text-white; }
+  .panel { @apply rounded-2xl border border-slate-800 bg-[#151f33]/80 p-6 shadow-xl shadow-black/10; }
+  .dashboard-preview { @apply rounded-3xl border border-slate-700/80 bg-[#151f33]/90 p-6 shadow-2xl shadow-blue-950/30; }
+  .metric-card { @apply rounded-xl border border-slate-700/70 bg-slate-950/40 p-3; }
+  .metric-card span, .metric-card small { @apply block text-[10px] uppercase tracking-wider text-slate-500; }
+  .metric-card strong { @apply my-1 block text-2xl text-white; }
+  .status-dot { @apply rounded-full bg-emerald-400/10 px-2.5 py-1 text-[10px] font-semibold text-emerald-300; }
+  .feature-card { @apply rounded-2xl border border-slate-800 bg-[#10182a]/80 p-5; }
+  .feature-card span { @apply text-xs font-semibold text-[#5b8cff]; }
+  .feature-card h2 { @apply mt-4 font-semibold text-white; }
+  .feature-card p { @apply mt-2 text-sm leading-6 text-slate-400; }
+}
